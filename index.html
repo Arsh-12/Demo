@@ -9,6 +9,9 @@
     <h1>Testing APIs</h1>
 </body>
 <script>
+    console.log("one");
+
+ 
     function handleResponse(data) {
   // Handle the data received from the API
   console.log(data);
@@ -17,7 +20,7 @@
 const script = document.createElement('script');
 script.src = 'https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items?jsonp=handleResponse&Authorization=Zoho-oauthtoken 1000.5475a75449adb0c44531f2e4736286d4.7c6de2418affeee9d62bc67d01787f68';
 document.head.appendChild(script);
-
+console.log("second");
 
     const options = {
   method: 'GET',
