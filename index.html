@@ -6,26 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Testing APIs</h1>
+    
 </body>
-<script>
-    console.log("one");
+<Script>
+//     function handleResponse(data) {
+//   // Handle the data received from the API
+//   console.log(data);
+// }
 
- 
-    function handleResponse(data) {
-  // Handle the data received from the API
-  console.log(data);
-}
+// const script = document.createElement('script');
+// script.src = 'https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items?jsonp=handleResponse&Authorization=Zoho-oauthtoken 1000.6fd48ffbef6becd0ae0188403a1e08c2.cce20d5b05f6b0585d94fadc74604e3e';
+// document.head.appendChild(script);
 
-const script = document.createElement('script');
-script.src = 'https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items?jsonp=handleResponse&Authorization=Zoho-oauthtoken 1000.44ad3cc33ff4d35501e88fab3b027379.fc192516dbab9bf0bf61ffa5efb0f83f';
-document.head.appendChild(script);
-console.log("second");
 
-    const options = {
+const options = {
   method: 'GET',
   headers: {
-    Authorization: 'Zoho-oauthtoken 1000.44ad3cc33ff4d35501e88fab3b027379.fc192516dbab9bf0bf61ffa5efb0f83f'
+    'Authorization': 'Zoho-oauthtoken 1000.3817f8a145bfeccc02c983c79ba4bc41.78f0b3f3129e336f1636c7d1a921d9e4',
+    'Content-Type' : 'application/json'
   }
 };
 
@@ -33,5 +31,12 @@ fetch('https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items', op
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
-</script>
+
+
+
+</Script>
 </html>
+<!-- // curl "https://cre   ator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items" \
+//   -X GET \
+//   -H "Authorization: Zoho-oauthtoken 1000.6fd48ffbef6becd0ae0188403a1e08c2.cce20d5b05f6b0585d94fadc74604e3e"
+</script> -->
