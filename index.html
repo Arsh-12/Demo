@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Example</title>
+    <title>Zoho API Example</title>
 </head>
 <body>
-    <h1>Testing APIs</h1>
+    <h1>Testing Zoho API</h1>
 
     <script>
         (async () => {
-            const userId = 1; // You can change this to any user ID from the JSONPlaceholder API
-            const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+            const url = 'https://creator.zoho.com/api/v2.1/zoho_user12388/franchise-management/report/All_Franchise';
+            const accessToken = 'Zoho-oauthtoken 1000.92134220e0bdf066f7e0464d555e3368.7a9c581231cc5f1836f76332ccaa22da';
+
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Authorization': accessToken,
+                    'Content-Type': 'application/json'
+                }
+            };
 
             try {
-                const response = await fetch(url);
-                const userData = await response.json();
-                console.log(userData);
+                const response = await fetch(url, options);
+                const responseData = await response.json();
+                console.log(responseData);
             } catch (error) {
                 console.error(error);
             }
-            console.log("Testing...");
+            console.log("Testing Zoho API...");
         })();
     </script>
 </body>
