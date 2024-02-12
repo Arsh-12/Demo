@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>API Example</title>
 </head>
 <body>
     <h1>Testing APIs</h1>
 
     <script>
         (async () => {
-            const url = 'https://myallies-breaking-news-v1.p.rapidapi.com/GetCompanyDetailsBySymbol?symbol=twtr';
-            const options = {
-                method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-                    'X-RapidAPI-Host': 'myallies-breaking-news-v1.p.rapidapi.com'
-                }
-            };
+            const userId = 1; // You can change this to any user ID from the JSONPlaceholder API
+            const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
 
             try {
-                const response = await fetch(url, options);
-                const result = await response.text();
-                console.log(result);
+                const response = await fetch(url);
+                const userData = await response.json();
+                console.log(userData);
             } catch (error) {
                 console.error(error);
             }
