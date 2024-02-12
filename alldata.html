@@ -3,32 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zoho API Example</title>
 </head>
 <body>
-    
+    <h1>Testing Zoho API</h1>
+
+    <script>
+        (async () => {
+            const proxyUrl = 'https://arsh-12.github.io/proxy.php/proxy.php';
+            
+            try {
+                const response = await fetch(proxyUrl);
+                const responseData = await response.json();
+                console.log(responseData);
+            } catch (error) {
+                console.error(error);
+            }
+            console.log("Testing Zoho API...");
+        })();
+    </script>
 </body>
-<script>
-    function handleResponse(data) {
-  // Handle the data received from the API
-  console.log(data);
-}
-
-const script = document.createElement('script');
-script.src = 'https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items?jsonp=handleResponse&Authorization=Zoho-oauthtoken 1000.333b48984d329e312d3e6c71f896d1f9.8d27e26793e367c06e9562c9ca0413a1';
-document.head.appendChild(script);
-
-
-    const options = {
-  method: 'GET',
-  headers: {
-    Authorization: 'Zoho-oauthtoken 1000.333b48984d329e312d3e6c71f896d1f9.8d27e26793e367c06e9562c9ca0413a1'
-  }
-};
-
-fetch('https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-</script>
 </html>
