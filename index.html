@@ -10,19 +10,10 @@
 
     <script>
         (async () => {
-            const url = 'https://creator.zoho.com/api/v2.1/zoho_user12388/franchise-management/report/All_Franchise';
-            const accessToken = 'Zoho-oauthtoken 1000.92134220e0bdf066f7e0464d555e3368.7a9c581231cc5f1836f76332ccaa22da';
-
-            const options = {
-                method: 'GET',
-                headers: {
-                    'Authorization': accessToken,
-                    'Content-Type': 'application/json'
-                }
-            };
-
+            const proxyUrl = 'https://arsh-12.github.io/proxy.php/proxy.php';
+            
             try {
-                const response = await fetch(url, options);
+                const response = await fetch(proxyUrl);
                 const responseData = await response.json();
                 console.log(responseData);
             } catch (error) {
