@@ -26,28 +26,28 @@ try {
 	console.error(error);
 }
 	console.log("Testing...")
-	var xhr = new XMLHttpRequest(); 
-		xhr.onload = (res)=>{ 
-		if(res.target.status == 200){ 
-			document.body.innerHTML += 
-			(res.target.responseText); 
-		} 
-		} 
-		xhr.open("GET","127.0.0.1:5501/fetch.html/todos/1",true); 
-		xhr.send(); 
+	// var xhr = new XMLHttpRequest(); 
+	// 	xhr.onload = (res)=>{ 
+	// 	if(res.target.status == 200){ 
+	// 		document.body.innerHTML += 
+	// 		(res.target.responseText); 
+	// 	} 
+	// 	} 
+	// 	xhr.open("GET","127.0.0.1:5501/fetch.html/todos/1",true); 
+	// 	xhr.send(); 
 
-const options = {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Zoho-oauthtoken 1000.497d233cbcdfa3c31d3891743caddc88.6da223e94be2afc1e796e360bc8ca63b',
-    'Content-Type' : 'application/json'
-  }
-};
+// const options = {
+//   method: 'GET',
+//   headers: {
+//     'Authorization': 'Zoho-oauthtoken 1000.497d233cbcdfa3c31d3891743caddc88.6da223e94be2afc1e796e360bc8ca63b',
+//     'Content-Type' : 'application/json'
+//   }
+// };
 
-fetch('https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+// fetch('https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
 
 
 
