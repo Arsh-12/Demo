@@ -9,14 +9,23 @@
     
 </body>
 <Script>
-//     function handleResponse(data) {
-//   // Handle the data received from the API
-//   console.log(data);
-// }
+	const url = 'https://myallies-breaking-news-v1.p.rapidapi.com/GetCompanyDetailsBySymbol?symbol=twtr';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+		'X-RapidAPI-Host': 'myallies-breaking-news-v1.p.rapidapi.com'
+	}
+};
 
-// const script = document.createElement('script');
-// script.src = 'https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items?jsonp=handleResponse&Authorization=Zoho-oauthtoken 1000.6fd48ffbef6becd0ae0188403a1e08c2.cce20d5b05f6b0585d94fadc74604e3e';
-// document.head.appendChild(script);
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+	console.log("Testing...")
 	var xhr = new XMLHttpRequest(); 
 		xhr.onload = (res)=>{ 
 		if(res.target.status == 200){ 
