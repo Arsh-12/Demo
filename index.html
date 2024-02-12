@@ -17,7 +17,15 @@
 // const script = document.createElement('script');
 // script.src = 'https://creator.zoho.com/api/v2.1/user6_demo11/arsh/report/All_Items?jsonp=handleResponse&Authorization=Zoho-oauthtoken 1000.6fd48ffbef6becd0ae0188403a1e08c2.cce20d5b05f6b0585d94fadc74604e3e';
 // document.head.appendChild(script);
-
+	var xhr = new XMLHttpRequest(); 
+		xhr.onload = (res)=>{ 
+		if(res.target.status == 200){ 
+			document.body.innerHTML += 
+			(res.target.responseText); 
+		} 
+		} 
+		xhr.open("GET","127.0.0.1:5501/fetch.html/todos/1",true); 
+		xhr.send(); 
 
 const options = {
   method: 'GET',
