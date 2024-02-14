@@ -10,20 +10,19 @@
 
     <script>
         (async () => {
-            const proxyUrl = 'https://arsh-12.github.io/proxy.php/proxy.php';
-            
-            try {
-                const response = await fetch(proxyUrl);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
+           let headersList = {
+ "Accept": "/",
+ "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+ "Authorization": "Zoho-oauthtoken 1000.9303a81d2f71b426b7e304ee685d5406.f4af3c63e7f189c5f70bab7eba314934"
+}
 
-                const responseData = await response.json();
-                console.log(responseData);
-            } catch (error) {
-                console.error(error);
-            }
-            console.log("Testing Zoho API...");
+let response = await fetch("https://creator.zoho.com/api/v2.1/user6_demo11/order-management-for-stitching/report/Sales_Order_Report", { 
+  method: "GET",
+  headers: headersList
+});
+
+let data = await response.text();
+console.log(data);
         })();
     </script>
 </body>
